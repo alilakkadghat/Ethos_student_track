@@ -1,10 +1,10 @@
-const mysql = require('mysql');
+const mysql = require('mysql2');
 
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: 'password',
-  database: 'campus_security'
+  password: 'ali@123$',
+  database: 'schooldb'
 });
 
 connection.connect((err) => {
@@ -17,10 +17,10 @@ connection.connect((err) => {
 
 const IdSwipe = {
   getAll: (callback) => {
-    connection.query('SELECT * FROM id_swipes', callback);
+    connection.query('SELECT * FROM card_swipe', callback);
   },
   getById: (id, callback) => {
-    connection.query('SELECT * FROM id_swipes WHERE id = ?', [id], callback);
+    connection.query('SELECT * FROM card_swipe WHERE location_id ="gym"', [id], callback);
   }
 };
 
