@@ -1,0 +1,165 @@
+/* src/App.css */
+:root {
+  --background-color: #f4f7f6;
+  --card-background: #ffffff;
+  --header-color: #2c3e50;
+  --text-color: #34495e;
+  --primary-color: #3498db;
+  --primary-color-dark: #2980b9;
+  --border-color: #ecf0f1;
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --error-color: #e74c3c;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  color: var(--header-color);
+  font-size: 2.5rem;
+}
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  max-width: 1400px;
+  justify-content: center;
+}
+
+.component-card {
+  background-color: var(--card-background);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  padding: 25px;
+  flex: 1;
+  min-width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.component-card h2 {
+  color: var(--primary-color);
+  margin-top: 0;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+/* Form Styles */
+.log-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 12px 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: var(--primary-color-dark);
+}
+
+/* Timeline & Alerts List Styles */
+.search-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.search-bar input {
+  flex-grow: 1;
+}
+
+.timeline-summary {
+  background-color: #ecf8ff;
+  border-left: 4px solid var(--primary-color);
+  padding: 15px;
+  margin: 20px 0;
+  font-style: italic;
+  border-radius: 4px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+li {
+  padding: 15px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+.alert-item {
+  border-left: 4px solid var(--error-color);
+}
+
+.timeline-item .message {
+  font-weight: bold;
+}
+
+.timeline-item .meta, .alert-item .meta {
+  font-size: 0.85rem;
+  color: #7f8c8d;
+  margin-top: 5px;
+}
+
+.status-message {
+  text-align: center;
+  padding: 20px;
+  color: #7f8c8d;
+  font-style: italic;
+}
